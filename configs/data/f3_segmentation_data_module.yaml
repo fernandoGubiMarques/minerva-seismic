@@ -1,0 +1,9 @@
+class_path: minerva_seismic.data.data_modules.f3_segmentation.F3SegmentationDataModule
+init_args:
+  train_path: "/workspaces/seismic/data/f3_segmentation/images"
+  annotations_path: "/workspaces/seismic/data/f3_segmentation/annotations"
+  transforms:
+    class_path: minerva.transforms.transform.Padding
+    init_args:
+      target_h_size: 256
+      target_w_size: 704

@@ -12,5 +12,5 @@ init_args:
   # Maximum number of epochs to train.
   max_epochs: 100
   # Logger and callback configuration (load from file)
-  logger: "/workspaces/seismic/Framework-SSL/configs/loggers/default.yaml"
-  callbacks: "/workspaces/seismic/Framework-SSL/configs/callbacks/default_train.yaml"
+  logger: "/workspaces/seismic/minerva-seismic/configs/loggers/default.yaml"
+  callbacks: "/workspaces/seismic/minerva-seismic/configs/callbacks/default_train.yaml"

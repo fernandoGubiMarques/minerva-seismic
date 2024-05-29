@@ -12,9 +12,9 @@
 
 # --------------------- INIT ARGS ---------------------
 # Model configuration file
-model: "/workspaces/seismic/Framework-SSL/configs/models/single_channel_unet.yaml" 
+model: "/workspaces/seismic/minerva-seismic/configs/models/single_channel_unet.yaml" 
 # Trainer configuration file
-trainer: "/workspaces/seismic/Framework-SSL/configs/trainer/default.yaml"
+trainer: "/workspaces/seismic/minerva-seismic/configs/trainer/default.yaml"
 log_dir: null
 # Required metrics to evaluate the model (MSE and MAE). Follows torchmetrics API
 regression_metrics: 
@@ -29,6 +29,6 @@ run:
   # Set the task to evaluate
   task: evaluate
   # Data configuration file
-  data: "/workspaces/seismic/Framework-SSL/configs/data/f3_reconstruct_data.yaml"
+  data: "/workspaces/seismic/minerva-seismic/configs/data/f3_reconstruct_data_module.yaml"
   # Path to the checkpoint to evaluate
-  ckpt_path: "/workspaces/seismic/Framework-SSL/logs/lightning_logs/version_29/checkpoints/last.ckpt"
+  ckpt_path: ""

@@ -1,7 +1,7 @@
 # This file contains the configuration for the F3 reconstruction data module.
 
 # The class used and its init arguments.
-class_path: minerva.data.data_modules.f3_reconstruction.F3ReconstructionDataModule
+class_path: minerva_seismic.data.data_modules.f3_reconstruction.F3ReconstructionDataModule
 init_args:
   # Location of input and target data
   input_path: /workspaces/seismic/data/original.zarr
@@ -9,7 +9,7 @@ init_args:
   # Desired data shape
   data_shape: [1, 951, 462]
   # Default batch size
-  batch_size: 16
+  batch_size: 4
   # The input and target transforms to apply
   input_transform:
     # We create a pipeline of transforms, with a single transform to cast the 
