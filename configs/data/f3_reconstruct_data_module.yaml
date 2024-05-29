@@ -4,8 +4,8 @@
 class_path: minerva_seismic.data.data_modules.f3_reconstruction.F3ReconstructionDataModule
 init_args:
   # Location of input and target data
-  input_path: /workspaces/seismic/data/original.zarr
-  target_path: /workspaces/seismic/data/envelope.zarr
+  input_path: /workspaces/minerva-dev-workspace/data/f3_reconstruction/original.zarr
+  target_path: /workspaces/minerva-dev-workspace/data/f3_reconstruction/envelope.zarr
   # Desired data shape
   data_shape: [1, 951, 462]
   # Default batch size

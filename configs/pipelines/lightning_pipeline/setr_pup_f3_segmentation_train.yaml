@@ -1,5 +1,5 @@
-model: "/workspaces/seismic/minerva-seismic/configs/models/setr_pup.yaml"
-trainer: "/workspaces/seismic/minerva-seismic/configs/trainer/default.yaml"
+model: "/workspaces/minerva-dev-workspace/minerva-seismic/configs/models/setr_pup.yaml"
+trainer: "/workspaces/minerva-dev-workspace/minerva-seismic/configs/trainer/default.yaml"
 run:
   task: fit
-  data: "/workspaces/seismic/minerva-seismic/configs/data/f3_segmentation_data_module.yaml"
+  data: "/workspaces/minerva-dev-workspace/minerva-seismic/configs/data/f3_segmentation_data_module.yaml"
