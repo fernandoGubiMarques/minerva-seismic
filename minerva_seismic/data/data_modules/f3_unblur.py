@@ -56,7 +56,7 @@ class F3UnblurDataModule(L.LightningDataModule):
             test_files = [self.data_root / f"F3_test_{layer}" for layer in self.data_layers]
             test_data = [np.load(file) for file in test_files]
             test_reader = MultiReader([
-                PatchedArrayReader(d, d.shape[-2:])
+                PatchedArrayReader(d, (1, d.shape[1], d.shape[2]))
                 for d in test_data
             ])
 
