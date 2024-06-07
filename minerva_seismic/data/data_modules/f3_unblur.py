@@ -62,7 +62,7 @@ class F3UnblurDataModule(L.LightningDataModule):
 
             test_dataset = SupervisedReconstructionDataset(
                 [test_reader, test_reader],
-                [self.transform, Identity()]
+                [self.transform, None]
             )
 
             self.datasets['test'] = test_dataset
