@@ -43,7 +43,7 @@ class F3UnblurDataModule(L.LightningDataModule):
 
             train_dataset = SupervisedReconstructionDataset(
                 [train_reader, train_reader],
-                [self.transform, Identity()]
+                [self.transform, None]
             )
 
             train_range = range(int((1 - self.val_percent) * len(train_dataset)))
