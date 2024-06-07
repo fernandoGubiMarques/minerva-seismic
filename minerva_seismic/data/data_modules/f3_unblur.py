@@ -37,7 +37,7 @@ class F3UnblurDataModule(L.LightningDataModule):
             train_files = [self.data_root / f"F3_train_{layer}.npy" for layer in self.data_layers]
             train_data = [np.load(file) for file in train_files]
             train_reader = MultiReader([
-                PatchedArrayReader(d, d.shape[-2:])
+                PatchedArrayReader(d, (1, d.shape[1], d.shape[2]))
                 for d in train_data
             ])
 
@@ -46,8 +46,8 @@ class F3UnblurDataModule(L.LightningDataModule):
                 [self.transform, Identity()]
             )
 
-            train_range = range((1 - self.val_percent) * len(train_dataset))
-            val_range = range((1 - self.val_percent) * len(train_dataset), len(train_dataset))
+            train_range = range(int((1 - self.val_percent) * len(train_dataset)))
+            val_range = range(int((1 - self.val_percent) * len(train_dataset)), len(train_dataset))
 
             self.datasets['val'] = Subset(train_dataset, val_range)
             self.datasets['train'] = Subset(train_dataset, train_range)
